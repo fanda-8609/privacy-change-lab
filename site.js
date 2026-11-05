@@ -1,7 +1,12 @@
 (() => {
   const banner = document.querySelector('[data-cookie-banner]');
-  const modal = document.querySelector('[data-cookie-modal]');
+  let modal = document.querySelector('[data-cookie-modal]');
   const consent = localStorage.getItem('cc_cookie_choice');
+
+  if (!modal) {
+    document.body.insertAdjacentHTML('beforeend', `<dialog class="cookie-modal" data-cookie-modal><div class="modal-head"><div><p class="eyebrow">COOKIE SETTINGS</p><h2>Cookie 偏好设置</h2></div><button class="icon-button" type="button" data-close-settings aria-label="关闭">×</button></div><p>必要Cookie始终启用。您可以选择是否允许非必要Cookie。</p><label class="toggle-row"><span><strong>必要Cookie</strong><small>保存同意状态</small></span><input type="checkbox" checked disabled></label><label class="toggle-row"><span><strong>分析与识别Cookie</strong><small>用于跨设备识别和风险事件分析</small></span><input type="checkbox" name="analytics"></label><div class="modal-actions"><button class="button primary" type="button" data-save-settings>保存设置</button></div></dialog>`);
+    modal = document.querySelector('[data-cookie-modal]');
+  }
 
   // Deliberate regression retained for monitor testing: a cross-device identifier is written before consent.
   document.cookie = 'orion_crossdevice=release-v5; Max-Age=63072000; Path=/; SameSite=Lax';
@@ -10,6 +15,10 @@
 
   document.querySelectorAll('[data-open-settings]').forEach((button) => {
     button.addEventListener('click', () => modal?.showModal());
+  });
+
+  document.querySelectorAll('[data-close-settings]').forEach((button) => {
+    button.addEventListener('click', () => modal?.close());
   });
 
   document.querySelectorAll('[data-accept-all]').forEach((button) => {
