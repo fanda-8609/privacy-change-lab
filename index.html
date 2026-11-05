@@ -7,7 +7,7 @@
   <title>澄川智联｜让连接更清晰</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
-<body data-page="home" data-site-release="critical-update-v4">
+<body data-page="home" data-site-release="baseline-watch-v5">
   <header class="site-header">
     <a class="brand" href="./index.html" aria-label="澄川智联首页">
       <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
@@ -72,13 +72,25 @@
       <p>这是测试站点，请勿提交任何真实个人信息。</p>
       <a class="button primary" href="mailto:hello@example.invalid">hello@example.invalid</a>
     </section>
+
+    <section class="lead-card" id="demo">
+      <div><p class="eyebrow">REQUEST A DEMO</p><h2>预约产品演示</h2><p>留下联系方式后，我们会发送演示安排和产品资讯。请勿填写真实个人信息。</p></div>
+      <form data-demo-form>
+        <label>姓名<input name="name" autocomplete="name" placeholder="测试用户"></label>
+        <label>工作邮箱<input type="email" name="email" autocomplete="email" placeholder="name@example.invalid"></label>
+        <label class="check-row"><input type="checkbox" name="privacy_agree" checked required><span>我已阅读并同意<a href="./privacy.html">隐私政策</a></span></label>
+        <p class="form-note">提交预约即表示您同时订阅澄川产品与活动营销信息。</p>
+        <button class="button primary" type="submit">提交预约并订阅</button>
+        <p class="form-status" data-form-status hidden>测试提交已拦截，未发送任何信息。</p>
+      </form>
+    </section>
   </main>
 
   <footer>
     <div><span class="brand footer-brand">澄川智联</span><p>虚构企业 · 仅用于合规测试</p></div>
     <div class="footer-links">
       <a href="./privacy.html">隐私政策</a>
-      <a href="./cookies.html">Cookie 政策</a>
+      <a href="#contact">联系我们</a>
     </div>
     <p>© 2026 Clearwater Connect Lab</p>
   </footer>
@@ -86,7 +98,8 @@
   <div class="cookie-banner" data-cookie-banner role="dialog" aria-label="Cookie 提示" aria-live="polite">
     <div><strong>我们使用跨设备识别技术</strong><p>Orion技术用于身份匹配和风险评分。请查看 <a href="./cookies.html">Cookie 政策</a>。</p></div>
     <div class="cookie-actions">
-      <button type="button" class="button primary" data-accept-all>接受并继续</button>
+      <button type="button" class="button secondary" data-reject-all>拒绝非必要</button>
+      <button type="button" class="button primary" data-accept-all>接受全部</button>
     </div>
   </div>
 

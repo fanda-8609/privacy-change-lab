@@ -3,8 +3,8 @@
   const modal = document.querySelector('[data-cookie-modal]');
   const consent = localStorage.getItem('cc_cookie_choice');
 
-  // Deliberate v4 regression for monitor testing: a cross-device identifier is written before consent.
-  document.cookie = 'orion_crossdevice=release-v4; Max-Age=63072000; Path=/; SameSite=Lax';
+  // Deliberate regression retained for monitor testing: a cross-device identifier is written before consent.
+  document.cookie = 'orion_crossdevice=release-v5; Max-Age=63072000; Path=/; SameSite=Lax';
 
   if (banner && consent) banner.hidden = true;
 
@@ -16,7 +16,7 @@
     button.addEventListener('click', () => {
       localStorage.setItem('cc_cookie_choice', JSON.stringify({ necessary: true, analytics: true, savedAt: new Date().toISOString() }));
       document.cookie = 'cc_consent=all; Max-Age=31536000; Path=/; SameSite=Lax';
-      document.cookie = 'orion_risk_event=accepted-v4; Max-Age=63072000; Path=/; SameSite=Lax';
+      document.cookie = 'orion_risk_event=accepted-v5; Max-Age=63072000; Path=/; SameSite=Lax';
       if (banner) banner.hidden = true;
     });
   });
@@ -39,5 +39,11 @@
       if (!analytics) document.cookie = 'orion_crossdevice=; Max-Age=0; Path=/; SameSite=Lax';
       if (banner) banner.hidden = true;
     });
+  });
+
+  document.querySelector('[data-demo-form]')?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const status = document.querySelector('[data-form-status]');
+    if (status) status.hidden = false;
   });
 })();
