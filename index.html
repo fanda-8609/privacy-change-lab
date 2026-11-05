@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="澄川智联隐私与 Cookie 监控测试站点。">
+  <title>澄川智联｜让连接更清晰</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body data-page="home" data-site-release="material-update-v2">
+  <header class="site-header">
+    <a class="brand" href="./index.html" aria-label="澄川智联首页">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span>澄川智联</span>
+    </a>
+    <nav aria-label="主导航">
+      <a href="#platform">平台</a>
+      <a href="#approach">方法</a>
+      <a href="#contact">联系</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">CLEARWATER CONNECT · TEST ENVIRONMENT</p>
+        <h1>把复杂连接，<br><em>变成清晰行动。</em></h1>
+        <p class="lede">面向中国与欧洲市场的虚构企业数据协作平台。本站仅用于隐私政策、Cookie 与网页变更监控测试，不提供真实服务。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#platform">了解测试服务</a>
+          <a class="button secondary" href="./privacy.html">查看隐私政策</a>
+        </div>
+      </div>
+      <div class="signal-card" aria-label="连接状态展示">
+        <div class="signal-top"><span>NETWORK MAP</span><span class="live-dot">LIVE</span></div>
+        <div class="orbit">
+          <span class="node node-a"></span><span class="node node-b"></span><span class="node node-c"></span>
+          <span class="core">CC</span>
+        </div>
+        <div class="metrics">
+          <div><strong>03</strong><span>区域节点</span></div>
+          <div><strong>24/7</strong><span>协同状态</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="platform">
+      <p class="eyebrow">PLATFORM</p>
+      <div class="section-heading">
+        <h2>协作不必穿过迷雾</h2>
+        <p>用统一工作台连接项目、内容与区域团队，让每次交付都有清晰上下文。</p>
+      </div>
+      <div class="feature-grid">
+        <article><span>01</span><h3>区域协同</h3><p>在一个视图中安排不同地区团队的工作节奏。</p></article>
+        <article><span>02</span><h3>内容流转</h3><p>集中查看材料状态、责任人与下一步动作。</p></article>
+        <article><span>03</span><h3>运行洞察</h3><p>通过汇总指标了解项目进展与服务使用情况。</p></article>
+      </div>
+    </section>
+
+    <section class="split" id="approach">
+      <div><p class="eyebrow">OUR APPROACH</p><h2>克制、透明、可追踪</h2></div>
+      <div class="principles">
+        <p><b>01</b><span><strong>少一点噪声</strong>只呈现真正影响决策的信息。</span></p>
+        <p><b>02</b><span><strong>多一点上下文</strong>让跨区域协作保持连续。</span></p>
+        <p><b>03</b><span><strong>留下清晰记录</strong>用版本和状态还原过程。</span></p>
+      </div>
+    </section>
+
+    <section class="contact-card" id="contact">
+      <p class="eyebrow">CONTACT</p>
+      <h2>从一次清晰对话开始</h2>
+      <p>这是测试站点，请勿提交任何真实个人信息。</p>
+      <a class="button primary" href="mailto:hello@example.invalid">hello@example.invalid</a>
+    </section>
+  </main>
+
+  <footer>
+    <div><span class="brand footer-brand">澄川智联</span><p>虚构企业 · 仅用于合规测试</p></div>
+    <div class="footer-links">
+      <a href="./privacy.html">隐私政策</a>
+      <span aria-label="Cookie政策链接已移除">Cookie 政策链接维护中</span>
+      <button type="button" class="text-button" data-open-settings>Cookie 设置</button>
+    </div>
+    <p>© 2026 Clearwater Connect Lab</p>
+  </footer>
+
+  <div class="cookie-banner" data-cookie-banner role="dialog" aria-label="Cookie 提示" aria-live="polite">
+    <div><strong>我们使用 Cookie</strong><p>我们使用必要及分析 Cookie 来改善体验。继续了解请查看 <a href="./cookies.html">Cookie 政策</a>。</p></div>
+    <div class="cookie-actions">
+      <button type="button" class="button secondary" data-reject-all>拒绝全部</button>
+      <button type="button" class="button primary" data-accept-all>接受全部</button>
+    </div>
+  </div>
+
+  <dialog class="cookie-modal" data-cookie-modal>
+    <form method="dialog">
+      <div class="modal-head"><div><p class="eyebrow">COOKIE CONTROL</p><h2>管理 Cookie</h2></div><button class="icon-button" value="cancel" aria-label="关闭">×</button></div>
+      <label class="toggle-row"><span><strong>必要 Cookie</strong><small>用于保存网站基础状态，始终启用。</small></span><input type="checkbox" checked disabled></label>
+      <label class="toggle-row"><span><strong>分析 Cookie</strong><small>帮助我们了解页面访问情况。</small></span><input type="checkbox" name="analytics" checked></label>
+      <div class="modal-actions"><button class="button primary" value="save" data-save-settings>保存选择</button></div>
+    </form>
+  </dialog>
+
+  <script src="./site.js"></script>
+</body>
+</html>
